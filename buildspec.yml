@@ -19,17 +19,18 @@ phases:
       - npm install
       - echo pwd
       - pwd
+      - echo files
+      - ls
   build:
     commands:
       - echo pwd
       - pwd
       - echo building
       - npm run build
+      - echo files
+      - ls
 artifacts:
-  commands:
-    - echo pwd
-    - pwd
   files: 
     - "**/*"
   discard-paths: no
-  base-directory: dist
+  base-directory: build
