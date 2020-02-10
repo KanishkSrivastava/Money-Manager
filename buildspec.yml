@@ -10,18 +10,26 @@ phases:
       - node -v
       - echo Checking NPM Version
       - npm -v
+      - echo pwd
+      - pwd
   pre_build:
     commands:
       - echo Installing dependencies
       - cd client
       - npm install
+      - echo pwd
+      - pwd
   build:
     commands:
+      - echo pwd
+      - pwd
       - echo building
-      - cd client
       - npm run build
 artifacts:
+  commands:
+    - echo pwd
+    - pwd
   files: 
     - "**/*"
   discard-paths: no
-  base-directory: client/dist
+  base-directory: dist
